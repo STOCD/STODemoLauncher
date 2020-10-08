@@ -1,0 +1,8 @@
+﻿2.10.0
+
+- Fix for relocated GameClient executables
+
+
+2.9.7
+
+- Closed a memory leak related to auto-update checks 

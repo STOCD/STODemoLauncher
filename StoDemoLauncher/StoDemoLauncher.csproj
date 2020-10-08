@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{43F03D56-50FE-48DD-8ED5-B8249BC758DB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StoDemoLauncher</RootNamespace>
+    <AssemblyName>StoDemoLauncher</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Command.ico</ApplicationIcon>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackupManager.cs" />
+    <Compile Include="BusyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusyForm.Designer.cs">
+      <DependentUpon>BusyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\AbstractFileFilter.cs" />
+    <Compile Include="Filters\FilterFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Filters\FilterFileForm.Designer.cs">
+      <DependentUpon>FilterFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\InterfaceFilterSettings.cs" />
+    <Compile Include="Filters\RemoveSectionsFileControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Filters\RemoveSectionsFileControl.Designer.cs">
+      <DependentUpon>RemoveSectionsFileControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filters\RemoveMessagesFileFilter.cs" />
+    <Compile Include="Filters\RemoveResourcesFileFilter.cs" />
+    <Compile Include="Filters\AbstractRemoveSectionsFileFilter.cs" />
+    <Compile Include="Filters\RemoveSectionsSettings.cs" />
+    <Compile Include="Helper\ConfigurationFile.cs" />
+    <Compile Include="Helper\IniFile.cs" />
+    <Compile Include="Helper\MruList.cs" />
+    <Compile Include="Helper\StringFilter.cs" />
+    <Compile Include="Model\DemoCostume.cs" />
+    <Compile Include="Model\DemoResource.cs" />
+    <Compile Include="Model\DemoSection.cs" />
+    <Compile Include="Model\DemoState.cs" />
+    <Compile Include="OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parser\AbstractSectionsParser.cs" />
+    <Compile Include="Parser\CostumeParser.cs" />
+    <Compile Include="Parser\IniParser.cs" />
+    <Compile Include="Parser\ParserEngine.cs" />
+    <Compile Include="Parser\DemoInfoParser.cs" />
+    <Compile Include="Parser\MessagesParser.cs" />
+    <Compile Include="Parser\AbstractParser.cs" />
+    <Compile Include="Model\DemoMessage.cs" />
+    <Compile Include="Parser\ResourcesParser.cs" />
+    <Compile Include="RecordDemoAudioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordDemoAudioForm.Designer.cs">
+      <DependentUpon>RecordDemoAudioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenameDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenameDemoForm.Designer.cs">
+      <DependentUpon>RenameDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenderDemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenderDemoForm.Designer.cs">
+      <DependentUpon>RenderDemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReplaceCostumesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplaceCostumesForm.Designer.cs">
+      <DependentUpon>ReplaceCostumesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoDemoEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoDemoEditorForm.Designer.cs">
+      <DependentUpon>StoDemoEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameClient.cs" />
+    <Compile Include="Model\DemoInfo.cs" />
+    <Compile Include="StoDemoLauncherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoDemoLauncherForm.Designer.cs">
+      <DependentUpon>StoDemoLauncherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewSorting\ColHeader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BusyForm.resx">
+      <DependentUpon>BusyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filters\FilterFileForm.resx">
+      <DependentUpon>FilterFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filters\RemoveSectionsFileControl.resx">
+      <DependentUpon>RemoveSectionsFileControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordDemoAudioForm.resx">
+      <DependentUpon>RecordDemoAudioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenameDemoForm.resx">
+      <DependentUpon>RenameDemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenderDemoForm.resx">
+      <DependentUpon>RenderDemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReplaceCostumesForm.resx">
+      <DependentUpon>ReplaceCostumesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoDemoEditorForm.resx">
+      <DependentUpon>StoDemoEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoDemoLauncherForm.resx">
+      <DependentUpon>StoDemoLauncherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ListViewSorting\SortWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="autoupdate.html" />
+    <Content Include="Command.ico" />
+    <Content Include="Patchnotes.txt" />
+    <None Include="Resources\RemoveInternalGameErrorHS.png" />
+    <None Include="Resources\Redshirt.png" />
+    <None Include="Resources\CheckForUpdatesHS.png" />
+    <None Include="Resources\SettingsHS.png" />
+    <None Include="Resources\Filter.png" />
+    <None Include="Resources\OR.png" />
+    <None Include="Resources\AND.png" />
+    <None Include="Resources\CaseSensitive.png" />
+    <None Include="Resources\FindHS.png" />
+    <None Include="Resources\CloseFindHS.png" />
+    <None Include="Resources\RecordPreviewAudio.png" />
+    <None Include="Resources\MicrophoneHS.png" />
+    <None Include="Resources\RemoveFxHS.png" />
+    <None Include="Resources\CharacterSwapHS.png" />
+    <None Include="Resources\RemoveScanConeFxHS.png" />
+    <None Include="Resources\CloseHS.png" />
+    <None Include="Resources\RemoveWaveformHS.png" />
+    <None Include="Resources\RenameHS.png" />
+    <None Include="Resources\FilterHS.png" />
+    <None Include="Resources\EditMacroHS.png" />
+    <None Include="Resources\MacroHS.png" />
+    <None Include="Resources\RefreshHS.png" />
+    <None Include="Resources\AboutHS.png" />
+    <None Include="Resources\ForumsHS.png" />
+    <None Include="Resources\RemoveNotificationsHS.png" />
+    <None Include="Resources\DeleteHS.png" />
+    <None Include="Resources\SaveAsHS.png" />
+    <None Include="Resources\RecordPreviewHS.png" />
+    <None Include="Resources\PlayPreviewHS.png" />
+    <None Include="Resources\openHS.png" />
+    <None Include="Resources\saveHS.png" />
+    <None Include="Resources\TribbleIcon16.png" />
+    <None Include="Resources\StarfleetInstructor16.png" />
+    <None Include="Resources\Help.png" />
+    <None Include="Resources\HomeHS.png" />
+    <None Include="Resources\RecordHS.png" />
+    <None Include="Resources\PlayHS.png" />
+    <None Include="Resources\InsertPictureHS.png" />
+    <None Include="Resources\RestoreBackupHS.png" />
+    <None Include="Resources\BackupHS.png" />
+    <None Include="Resources\Splash.png" />
+    <None Include="Resources\openfileHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
