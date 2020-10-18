@@ -37,24 +37,24 @@ namespace StoDemoLauncher.Parser
                 lastCostumev5BraceLevel = braceLevel;
                 inCostumev5Section = true;
             }
-            if (inCostumev5Section && Costumetype.Equals("") && line.Trim().StartsWith("HreferencedCostume"))
+            if (inCostumev5Section && Costumetype.Equals("") && line.Trim().StartsWith("Hreferencedcostume"))
             {
-                this.Costumetype = "HreferencedCostume";
+                this.Costumetype = "Hreferencedcostume";
                 this.Costumename = line.Trim().Substring(19);
             }
-            if (inCostumev5Section && Costumetype.Equals("") && line.Trim().StartsWith("PsubstituteCostume"))
+            if (inCostumev5Section && Costumetype.Equals("") && line.Trim().StartsWith("Psubstitutecostume"))
             {
-                this.Costumetype = "PsubstituteCostume";
+                this.Costumetype = "Psubstitutecostume";
                 this.Costumename = line.Trim().Substring(19);
             }
-            if (inCostumev5Section && Costumetype.Equals("") && line.Trim().StartsWith("PstoredCostume"))
+            if (inCostumev5Section && Costumetype.Equals("") && line.Trim().StartsWith("Pstoredcostume"))
             {   
-                this.Costumetype = "PstoredCostume";
+                this.Costumetype = "Pstoredcostume";
                 this.Costumename = line.Trim().Substring(15);
             }
-            if (inCostumev5Section && Costumetype.Equals("") && line.Trim().StartsWith("PsubstituteCostume"))
+            if (inCostumev5Section && Costumetype.Equals("") && line.Trim().StartsWith("Psubstitutecostume"))
             {
-                this.Costumetype = "PsubstituteCostume";
+                this.Costumetype = "Psubstitutecostume";
                 this.Costumename = line.Trim().Substring(15);
             }
             if (inCostumev5Section && line.Trim().StartsWith("}") && braceLevel - 1 == lastCostumev5BraceLevel)

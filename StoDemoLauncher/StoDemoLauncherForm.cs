@@ -506,7 +506,7 @@ namespace StoDemoLauncher
         private void about_Event(object sender, EventArgs e)
         {
             MessageBox.Show("Version " + Application.ProductVersion + "\n" +
-                "by RachelGarrett\n\n" +
+                "by RachelGarrett, maintained by Thon\n\n" +
                 "Special thanks to:\n" +
                 "- h2orat\n" +
                 "- Chris Fisher\n" +
