@@ -225,6 +225,7 @@
     <Content Include="autoupdate.html" />
     <Content Include="Command.ico" />
     <Content Include="Patchnotes.txt" />
+    <None Include="Resources\PlayNoUI.png" />
     <None Include="Resources\RemoveInternalGameErrorHS.png" />
     <None Include="Resources\Redshirt.png" />
     <None Include="Resources\CheckForUpdatesHS.png" />

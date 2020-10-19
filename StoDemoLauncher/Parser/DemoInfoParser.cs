@@ -20,6 +20,7 @@ namespace StoDemoLauncher.Parser
         long EndTime = -1;
         string character = "";
         long Activeplayerref = -1;
+        long activePlayerRef = -1;
         long EntityRef = -1;
 
         /// <summary>
@@ -82,7 +83,22 @@ namespace StoDemoLauncher.Parser
                     character = character.Substring(1, character.Length - 2);
                 }
             }
+
+            if (line.Contains("savedName") && activePlayerRef == EntityRef)
+            {
+                character = line.Substring(line.LastIndexOf("savedName") + 10);
+                if (character.StartsWith("\"") && character.EndsWith("\""))
+                {
+                    character = character.Substring(1, character.Length - 2);
+                }
+            }
+
             // this is the entity reference of the player character
+            if (line.Contains("activePlayerRef"))
+            {
+                activePlayerRef = Convert.ToInt64(line.Substring(line.LastIndexOf("activePlayerRef") + 16));
+            }
+
             if (line.Contains("Activeplayerref"))
             {
                 Activeplayerref = Convert.ToInt64(line.Substring(line.LastIndexOf("Activeplayerref") + 16));

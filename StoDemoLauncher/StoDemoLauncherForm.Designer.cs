@@ -74,6 +74,7 @@
             this.matchAllTermsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matchAtLeastOneTermToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playDemoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playDemoNoUIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.renderDemoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recordDemoAudioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editDemoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -105,6 +106,7 @@
             this.openRedshirtScreenshotsFolderMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playDemoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playDemoNoUIMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.renderDemoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recordDemoAudioMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editDemoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -124,6 +126,7 @@
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.refreshToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.playDemoToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.playDemoNoUIToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.renderDemoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.recordDemoAudioToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.editDemoToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -172,6 +175,7 @@
             // 
             this.demosContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playDemoToolStripMenuItem,
+            this.playDemoNoUIToolStripMenuItem,
             this.renderDemoToolStripMenuItem,
             this.recordDemoAudioToolStripMenuItem,
             this.toolStripSeparator3,
@@ -403,6 +407,7 @@
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playDemoMenuItem,
+            this.playDemoNoUIMenuItem,
             this.renderDemoMenuItem,
             this.recordDemoAudioMenuItem,
             this.toolStripSeparator17,
@@ -464,6 +469,7 @@
             this.refreshToolStripButton,
             this.toolStripSeparator15,
             this.playDemoToolStripButton,
+            this.playDemoNoUIToolStripButton,
             this.renderDemoToolStripButton,
             this.recordDemoAudioToolStripButton,
             this.toolStripSeparator1,
@@ -543,6 +549,7 @@
             this.matchAllTermsToolStripMenuItem.ToolTipText = "All search terms must be found in a demo file";
             this.matchAllTermsToolStripMenuItem.Click += new System.EventHandler(this.matchAllTermsToolStripMenuItem_Click);
             // 
+
             // matchAtLeastOneTermToolStripMenuItem
             // 
             this.matchAtLeastOneTermToolStripMenuItem.Image = global::StoDemoLauncher.Properties.Resources.OR;
@@ -561,6 +568,16 @@
             this.playDemoToolStripMenuItem.Text = "Play Demo";
             this.playDemoToolStripMenuItem.ToolTipText = "Playback demo with Star Trek Online";
             this.playDemoToolStripMenuItem.Click += new System.EventHandler(this.playDemo_Event);
+            // 
+            // playDemoNoUIToolStripMenuItem
+            // 
+            this.playDemoNoUIToolStripMenuItem.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.playDemoNoUIToolStripMenuItem.Image = global::StoDemoLauncher.Properties.Resources.PlayNoUI;
+            this.playDemoNoUIToolStripMenuItem.Name = "playDemoNoUIToolStripMenuItem";
+            this.playDemoNoUIToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.playDemoNoUIToolStripMenuItem.Text = "Play Demo (No UI)";
+            this.playDemoNoUIToolStripMenuItem.ToolTipText = "Playback demo with Star Trek Online without the user interface.";
+            this.playDemoNoUIToolStripMenuItem.Click += new System.EventHandler(this.playDemoNoUI_Event);
             // 
             // renderDemoToolStripMenuItem
             // 
@@ -839,6 +856,15 @@
             this.playDemoMenuItem.Text = "&Play Demo";
             this.playDemoMenuItem.Click += new System.EventHandler(this.playDemo_Event);
             // 
+            // playDemoNoUIMenuItem
+            // 
+            this.playDemoNoUIMenuItem.Image = global::StoDemoLauncher.Properties.Resources.PlayNoUI;
+            this.playDemoNoUIMenuItem.Name = "playDemoNoUIMenuItem";
+            this.playDemoNoUIMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F8)));
+            this.playDemoNoUIMenuItem.Size = new System.Drawing.Size(316, 22);
+            this.playDemoNoUIMenuItem.Text = "&Play Demo without the user interface";
+            this.playDemoNoUIMenuItem.Click += new System.EventHandler(this.playDemoNoUI_Event);
+            // 
             // renderDemoMenuItem
             // 
             this.renderDemoMenuItem.Image = global::StoDemoLauncher.Properties.Resources.RecordHS;
@@ -1019,6 +1045,17 @@
             this.playDemoToolStripButton.ToolTipText = "Playback demo with Star Trek Online";
             this.playDemoToolStripButton.Click += new System.EventHandler(this.playDemo_Event);
             // 
+            // playDemoToolStripButton
+            // 
+            this.playDemoNoUIToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.playDemoNoUIToolStripButton.Image = global::StoDemoLauncher.Properties.Resources.PlayNoUI;
+            this.playDemoNoUIToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.playDemoNoUIToolStripButton.Name = "playDemoNoUIToolStripButton";
+            this.playDemoNoUIToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.playDemoNoUIToolStripButton.Text = "Play Demo (No UI)";
+            this.playDemoNoUIToolStripButton.ToolTipText = "Playback demo with Star Trek Online without the user interface";
+            this.playDemoNoUIToolStripButton.Click += new System.EventHandler(this.playDemoNoUI_Event);
+            // 
             // renderDemoToolStripButton
             // 
             this.renderDemoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -1190,11 +1227,13 @@
         private System.Windows.Forms.ToolStripButton refreshToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton playDemoToolStripButton;
+        private System.Windows.Forms.ToolStripButton playDemoNoUIToolStripButton;
         private System.Windows.Forms.ToolStripButton renderDemoToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton aboutToolStripButton;
         private System.Windows.Forms.ContextMenuStrip demosContextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem playDemoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem playDemoNoUIToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem renderDemoToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton editDemoToolStripButton;
         private System.Windows.Forms.ToolStripMenuItem editDemoToolStripMenuItem;
@@ -1221,6 +1260,7 @@
         private System.Windows.Forms.ToolStripMenuItem filtersMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeNotificationsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem playDemoMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem playDemoNoUIMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editDemoMenuItem;
         private System.Windows.Forms.ToolStripMenuItem renderDemoMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;

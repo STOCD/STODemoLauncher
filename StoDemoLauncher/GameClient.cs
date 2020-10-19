@@ -524,6 +524,21 @@ namespace StoDemoLauncher
             }
         }
 
+
+        public void PlayDemoNoUI(DemoInfo demo)
+        {
+            // Intercept missing demo file
+            if (this.DemoFileExists(demo))
+            {
+                this.RunDemo(demo.Server, "-demo_play " + demo.FileName + " -demo_hide_ui");
+            }
+            // demo file does not exist --> stop and warn the user
+            else
+            {
+                ShowMissingDemoFileMessage();
+            }
+        }
+
         /// <summary>
         /// Opens "Star Trek Online" in "demo_save_images" mode with the given
         /// demo.

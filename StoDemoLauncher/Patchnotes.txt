@@ -1,4 +1,10 @@
-﻿2.10.2
+﻿2.11.0
+
+- Fixed issue stopping old pre-House Shattered Demos from appearing
+- Added option to launch demos without the demorecord UI (hint: the gold button!)
+- Updated some UI icons - more will be done over time!
+
+2.10.2
 
 - Fix for costume replacement not working (sorry!)
 - Updated About section

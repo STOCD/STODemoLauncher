@@ -51,17 +51,17 @@ namespace StoDemoLauncher
         /// <summary>
         /// Link to STO sourceforge project
         /// </summary>
-        private static string sourceforgeUrl = "https://sourceforge.net/projects/stodemolauncher/";
+        private static string sourceforgeUrl = "https://github.com/RadioActivitii/STODemoLauncher";
 
         /// <summary>
         /// Link to STO sourceforge project
         /// </summary>
-        private static string wikiUrl = "http://sourceforge.net/apps/mediawiki/stodemolauncher/";
+        private static string wikiUrl = "https://github.com/RadioActivitii/STODemoLauncher/releases";
 
         /// <summary>
         /// Link to auto-update page
         /// </summary>
-        private static string updateUrl = "http://stodemolauncher.sourceforge.net/autoupdate.html";
+        private static string updateUrl = "https://raw.githubusercontent.com/RadioActivitii/STODemoLauncher/main/StoDemoLauncher/autoupdate.txt";
 
         /// <summary>
         /// Silent background update thread
@@ -285,6 +285,17 @@ namespace StoDemoLauncher
             {
                 this.PromoteMruFile(this.gameClient.GetDemoPath(GetSelectedDemo()));
                 this.gameClient.PlayDemo(GetSelectedDemo());
+            }
+        }
+
+        /// Stuff for the No UI version of ^^
+        /// 
+        private void playDemoNoUI_Event(object sender, EventArgs e)
+        {
+            if (this.CheckSelectedFile())
+            {
+                this.PromoteMruFile(this.gameClient.GetDemoPath(GetSelectedDemo()));
+                this.gameClient.PlayDemoNoUI(GetSelectedDemo());
             }
         }
 
