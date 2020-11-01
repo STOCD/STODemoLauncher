@@ -1,4 +1,8 @@
-﻿2.11.0
+﻿2.11.1
+
+- More fixes for the costume parser
+
+2.11.0
 
 - Fixed issue stopping old pre-House Shattered Demos from appearing
 - Added option to launch demos without the demorecord UI (hint: the gold button!)

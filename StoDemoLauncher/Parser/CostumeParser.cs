@@ -57,6 +57,11 @@ namespace StoDemoLauncher.Parser
                 this.Costumetype = "Psubstitutecostume";
                 this.Costumename = line.Trim().Substring(15);
             }
+            if (inCostumev5Section && Costumetype.Equals("") && line.Trim().StartsWith("Pcdestructibleobjectcostume"))
+            {
+                this.Costumetype = "Pcdestructibleobjectcostume";
+                this.Costumename = line.Trim().Substring(28);
+            }
 
             if (line.Trim().StartsWith("CostumeV5"))
             {
@@ -83,6 +88,11 @@ namespace StoDemoLauncher.Parser
             {
                 this.Costumetype = "pSubstituteCostume";
                 this.Costumename = line.Trim().Substring(15);
+            }
+            if (inCostumev5Section && Costumetype.Equals("") && line.Trim().StartsWith("pcDestructibleObjectCostume"))
+            {
+                this.Costumetype = "pcDestructibleObjectCostume";
+                this.Costumename = line.Trim().Substring(28) + " (Ignore This)";
             }
 
             if (inCostumev5Section && line.Trim().StartsWith("}") && braceLevel - 1 == lastCostumev5BraceLevel)

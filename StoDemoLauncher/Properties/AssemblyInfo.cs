@@ -9,7 +9,7 @@ using System.Resources;
 [assembly: AssemblyTitle("Star Trek Online Demo Launcher")]
 [assembly: AssemblyDescription("Runs demo files recorded with Star Trek Online.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Thon's Eternal Nightmares")]
+[assembly: AssemblyCompany("twitter.com/radioactivitii")]
 [assembly: AssemblyProduct("Star Trek Online Demo Launcher")]
 [assembly: AssemblyCopyright("Public Domain")]
 [assembly: AssemblyTrademark("This application is not affiliated, developed or endorsed by Cryptic Studios or Perfect World. All trademarks are the property of their respective owners.")]
@@ -33,6 +33,6 @@ using System.Resources;
 // Sie können alle Werte angeben oder die standardmäßigen Build- und Revisionsnummern 
 // übernehmen, indem Sie "*" eingeben:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.11.0.0")]
-[assembly: AssemblyFileVersion("2.11.0.0")]
+[assembly: AssemblyVersion("2.11.1.0")]
+[assembly: AssemblyFileVersion("2.11.1.0")]
 [assembly: NeutralResourcesLanguageAttribute("en-US")]
