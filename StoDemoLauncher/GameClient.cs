@@ -515,7 +515,7 @@ namespace StoDemoLauncher
             // Intercept missing demo file
             if (this.DemoFileExists(demo))
             {
-                this.RunDemo(demo.Server, "-demo_play " + demo.FileName);
+                this.RunDemo(demo.Server, "-demo_play " + demo.FileName + " -showdevui 0");
             }
             // demo file does not exist --> stop and warn the user
             else
@@ -530,7 +530,7 @@ namespace StoDemoLauncher
             // Intercept missing demo file
             if (this.DemoFileExists(demo))
             {
-                this.RunDemo(demo.Server, "-demo_play " + demo.FileName + " -demo_hide_ui");
+                this.RunDemo(demo.Server, "-demo_play " + demo.FileName + " -demo_hide_ui -showdevui 0");
             }
             // demo file does not exist --> stop and warn the user
             else
